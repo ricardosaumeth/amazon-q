@@ -11,4 +11,5 @@ const destroyer = (numbers: number[], target1: number, target2: number) => {
   return numbers.filter(x => x !== target1 && x !== target2)
 }
 
-console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3)) // [1, 1]
+console.log(destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3))  // [1, 5, 1]
