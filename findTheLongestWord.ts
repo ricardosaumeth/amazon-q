@@ -5,4 +5,4 @@ const findTheLongestWord = (source: string) => {
   return [longestWord.length, longestWord]
 }
 
-console.log(findTheLongestWord("Ricardo Manuel Santana Saumeth"))
+console.log(findTheLongestWord("Ricardo Manuel Santana Saumeth")) // [6, Ricardo]
