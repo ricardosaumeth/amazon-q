@@ -1,12 +1,13 @@
 from functools import reduce
+from typing import Tuple
 
 
-def find_the_longest_word(source: str):
+def find_the_longest_word(source: str) -> Tuple[int, str]:
     if not isinstance(source, str):
         raise ValueError("input must be a valid string")
     if not source:
-      return [0, ""]
-    
+        return [0, ""]
+
     words = source.split(" ")
     longest = max(words, key=len)
     return [len(longest), longest]
