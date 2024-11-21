@@ -6,5 +6,5 @@ const mutation = (strings: string[]) => {
   return target.split("").every(s => source.includes(s))
 }
 
-console.log(mutation(["Alien", "lien"]))
-console.log(mutation(["Hello", "hey"]))
+console.log(mutation(["Alien", "lien"])) // true
+console.log(mutation(["Hello", "hey"])) // false
