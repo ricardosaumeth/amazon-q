@@ -35,10 +35,17 @@ type WinningCombo = {
   symbol: string
 }
 
+const validateSymbol = (symbol: string): void => {
+  if (symbol !== 'X' && symbol !== 'O') {
+    throw new Error('Symbol must be either "X" or "O"');
+  }
+}
+
 const isWinningCombo = ({
   board,
   symbol,
 }: WinningCombo): [boolean, WinningCombination | null] => {
+  validateSymbol(symbol)
   for (const combo of winCombo) {
     if (combo.every(x => board[x] === symbol)) {
       return [true, combo]
