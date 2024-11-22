@@ -1,11 +1,11 @@
-from typing import List, Tuple
+from typing import Tuple
 
 
 def convert_to_roman(number: int) -> str:
-    if not isinstance(number, int) or number < 1:
+    if number < 1:
         raise ValueError("Input must be a positive integer")
 
-    roman_numeral_map: List[Tuple[int, str]] = [
+    roman_numeral_map: list[Tuple[int, str]] = [
         (1000, "M"),
         (900, "CM"),
         (500, "D"),

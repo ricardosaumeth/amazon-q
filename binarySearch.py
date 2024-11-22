@@ -1,16 +1,14 @@
-from typing import List, Optional, Union
+from typing import Optional, Union
 import math
 
 
-def validate_numbers(numbers: List[float], target: Union[int, float]):
-    if not isinstance(numbers, List) or not isinstance(target, (int, float)):
-        raise ValueError("Invalid input types")
+def validate_numbers(numbers: list[float]):
     if not numbers:
         raise ValueError("List cannot be empty")
 
 
-def binary_search(numbers: List[float], target: Union[int, float]) -> Optional[int]:
-    validate_numbers(numbers, target)
+def binary_search(numbers: list[float], target: Union[int, float]) -> Optional[int]:
+    validate_numbers(numbers)
     numbers = sorted(numbers)
     left = 0
     right = len(numbers) - 1

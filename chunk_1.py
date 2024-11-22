@@ -1,10 +1,5 @@
-from typing import List, Optional
-
-
-def chunk(numbers: List[float], size: int) -> Optional[float]:
-    if not isinstance(numbers, List):
-        raise ValueError("Numbers is not valid")
-    if not isinstance(size, int) and size > 0:
+def chunk(numbers: list[float], size: int) -> list[list[float]]:
+    if size > 0:
         raise ValueError("Size must be a positive value")
     if not numbers:
         return []

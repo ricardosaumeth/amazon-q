@@ -1,14 +1,8 @@
-from typing import List, Tuple
-
-InnerArray = Tuple[float, float, float, float]
-Numbers = List[InnerArray]
+InnerArray = list[float]
+Numbers = list[InnerArray]
 
 
-def largest_of_four(numbers: Numbers) -> List[float]:
-    if not isinstance(numbers, List):
-        raise ValueError("List must be of type Numbers")
-    if not all(isinstance(x, List) for x in numbers):
-        raise ValueError("All elements mus be either int of float")
+def largest_of_four(numbers: Numbers) -> list[float]:
     return [max(arr) for arr in numbers]
 
 

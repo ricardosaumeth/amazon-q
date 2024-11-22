@@ -1,13 +1,4 @@
-def validate_array(numbers: list[int]):
-    if not isinstance(numbers, list):
-        raise ValueError("input must be a valid list of integers")
-    if not all(isinstance(x, (int, float)) for x in numbers):
-        raise ValueError("all elements in numbers must be numeric")
-
-
 def diff_arrays(array1: list[int], array2: list[int]):
-    validate_array(array1)
-    validate_array(array2)
 
     smallest, largest = (
         (array1, array2) if len(array1) <= len(array2) else (array2, array1)

@@ -18,29 +18,29 @@ win_combo: List[WinningCombination] = [
 
 # Game board
 board: Board = {
-    1: 'X',
-    2: 'X',
-    3: 'X',
-    4: 'O',
-    5: 'O',
-    6: 'X',
-    7: 'X',
-    8: 'O',
-    9: 'O',
+    1: "X",
+    2: "X",
+    3: "X",
+    4: "O",
+    5: "O",
+    6: "X",
+    7: "X",
+    8: "O",
+    9: "O",
 }
 
-def is_winning_combo(board: Board, symbol: str) -> Tuple[bool, Optional[WinningCombination]]:
-    if not isinstance(board, dict):
-        raise ValueError("Board must be a dictionary")
-    if not isinstance(symbol, str):
-        raise ValueError("Symbol must be a string")
+
+def is_winning_combo(
+    board: Board, symbol: str
+) -> Tuple[bool, Optional[WinningCombination]]:
     if len(symbol) != 1:
         raise ValueError("Symbol must be a single character")
-    
+
     for combo in win_combo:
         if all(board[x] == symbol for x in combo):
             return True, combo
     return False, None
+
 
 # Test the function
 print(is_winning_combo(board, "X"))  # (True, (1, 2, 3))

@@ -1,6 +1,4 @@
 def factorialize(number: int) -> int:
-    if not isinstance(number, int):
-        raise ValueError("Input must be a valid number")
     if number < 0:
         raise ValueError("Input must be a non-negative integer")
     #return 1 if number <= 1 else number * factorialize(number - 1)

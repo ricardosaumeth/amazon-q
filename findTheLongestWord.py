@@ -1,10 +1,6 @@
-from functools import reduce
-from typing import Tuple
+#from functools import reduce
 
-
-def find_the_longest_word(source: str) -> Tuple[int, str]:
-    if not isinstance(source, str):
-        raise ValueError("input must be a valid string")
+def find_the_longest_word(source: str) -> list[int | str]:
     if not source:
         return [0, ""]
 

@@ -1,10 +1,4 @@
 def linear_search(numbers: list[float], target: float) -> int:
-    if not isinstance(numbers, list):
-        raise ValueError("Input must be valid numbers")
-    if not all(isinstance(x, (int, float)) for x in numbers):
-        raise ValueError("All elements must be valid numbers")
-    if not isinstance(target, (int, float)):
-        raise ValueError("Target must be a valid number")
     # found = -1
     # for i, x in enumerate(numbers):
     #     if x == target:

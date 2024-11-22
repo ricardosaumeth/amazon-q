@@ -1,17 +1,9 @@
 def add_together(first: float):
-    validate_number(first, "First")
 
-    def inner(second: float) -> None:
-        validate_number(second, "Second")
+    def inner(second: float) -> float:
         return first + second
 
     return inner
-
-
-def validate_number(number: float, position: str):
-    if not isinstance(number, (int, float)) or isinstance(number, bool):
-        raise ValueError(f"{position} must be a valid number")
-
 
 # Example usage
 print(add_together(2)(30))  # Output: 32
