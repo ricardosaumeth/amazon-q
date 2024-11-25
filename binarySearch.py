@@ -9,7 +9,6 @@ def validate_numbers(numbers: list[float]):
 
 def binary_search(numbers: list[float], target: Union[int, float]) -> Optional[int]:
     validate_numbers(numbers)
-    numbers = sorted(numbers)
     left = 0
     right = len(numbers) - 1
     while left <= right:
@@ -22,5 +21,5 @@ def binary_search(numbers: list[float], target: Union[int, float]) -> Optional[i
             right = mid - 1
     return -1
 
-
-print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5))
+print(binary_search([1, 2, 3, 49, 5], 49)) # 3
+print(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5)) # 4
