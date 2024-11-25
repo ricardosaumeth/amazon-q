@@ -10,7 +10,7 @@ const binarySearch = (numbers: number[], target: number) => {
   let left = 0
   let right = numbers.length - 1
   while (left <= right) {
-    const mid = Math.floor((left + right) / 2)
+    const mid = left + Math.floor((right - left) / 2)
     if (numbers[mid] === target) return mid
     else if (numbers[mid] < target) left = mid + 1
     else right = mid - 1

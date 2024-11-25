@@ -12,7 +12,7 @@ def binary_search(numbers: list[float], target: Union[int, float]) -> Optional[i
     left = 0
     right = len(numbers) - 1
     while left <= right:
-        mid = math.floor((left + right) / 2)
+        mid = left +  math.floor((right - left) / 2)
         if numbers[mid] == target:
             return mid
         elif numbers[mid] < target:
