@@ -2,7 +2,7 @@ const addToguether = (first: number) => {
   validateNumber(first, "first")
 
   return (second: number) => {
-    validateNumber(first, "second")
+    validateNumber(second, "second")
     return first + second
   }
 }
